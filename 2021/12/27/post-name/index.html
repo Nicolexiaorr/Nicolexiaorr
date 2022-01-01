@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="life and writing"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Nicolexiaorr"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="数据标准化，正则化"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="life and writing"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Xiao Rao"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https:///codewithxiaorong.comimg/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https:///codewithxiaorong.comimg/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>数据标准化，正则化 - Xiao Rao</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="atom.xml" title="Xiao Rao" type="application/atom+xml">
+</head>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>数据标准化，正则化</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-12-27
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><strong>标准化（standardization）：</strong></p>
+<p>数据标准化是将数据按比例缩放，使其落入到一个小的区间内，标准化后的数据可正可负，但是一般绝对值不会太大，一般是z-score标准化方法：减去期望后除以标准差。</p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\gif.gif" alt="gif"></p>
+<p>其中 μ 是样本数据的均值（mean）， σ 是样本数据的标准差（std）。 标准差表示数据集的波动大小</p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\clipboard.png"></p>
+<p>上图则是一个散点序列的标准化过程：原图-&gt;减去均值-&gt;除以标准差。</p>
+<p>显而易见，变成了一个均值为 0 ，方差为 1 的分布，下图通过 Cost 函数让我们更好的理解标准化的作用。</p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\cost.png"></p>
+<p>机器学习的目标无非就是不断优化损失函数，使其值最小。在上图中， </p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name(w,b">.jpeg)</p>
+<p> 就是我们要优化的目标函数</p>
+<p>我们不难看出，标准化后可以更加容易地得出最优参数 \omega和 b</p>
+<p><img src="https://www.zhihu.com/equation?tex=b" alt="img"></p>
+<p> 以及计算出 </p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name(w,b">.jpeg)</p>
+<p> 的最小值，从而达到加速收敛的效果。 </p>
+<p>特点：</p>
+<p>对不同特征维度的伸缩变换的目的是使其不同度量之间的特征具有可比性，同时不改变原始数据的分布。</p>
+<p>好处：</p>
+<ol>
+<li>不改变原始数据的分布，保持各个特征维度对目标函数的影响权重</li>
+<li>对目标函数的影响体现在几何分布上</li>
+<li>在已有样本足够多的情况下比较稳定，适合现代嘈杂大数据场景</li>
+</ol>
+<p><strong>归一化（normalization）：</strong></p>
+<p>把数值放缩到0到1的小区间中（归到数字信号处理范畴之内），一般方法是最小最大规范的方法：min-max normalization</p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\1.gif"></p>
+<p>上面min-max normalization是线性归一化，还有非线性归一化，通过一些数学函数，将原始值进行映射。该方法包括log、指数、反正切等。需要根据数据分布的情况，决定非线性函数的曲线。</p>
+<p>log函数：x = lg(x)/lg(max)；反正切函数：x = atan(x)*2/pi</p>
+<p>应用：</p>
+<p>1.无量纲化</p>
+<p>例如房子数量和收入，从业务层知道这两者的重要性一样，所以把它们全部归一化，这是从业务层面上作的处理。</p>
+<p>2.避免数值问题</p>
+<p>不同的数据在不同列数据的数量级相差过大的话，计算起来大数的变化会掩盖掉小数的变化。</p>
+<p>3.一些模型求解的需要</p>
+<p>例如梯度下降法，如果不归一化，当学习率较大时，求解过程会呈之字形下降。学习率较小，则会产生直角形路线，不管怎么样，都不会是好路线（路线解释看西面归一化和标准化的对比）。<a target="_blank" rel="noopener" href="https://blog.csdn.net/dbat2015/article/details/50008315">解释神经网络梯度下降的文章</a>。</p>
+<p>4.时间序列</p>
+<p>进行log分析时，会将原本绝对化的时间序列归一化到某个基准时刻，形成相对时间序列，方便排查。</p>
+<p>5.收敛速度</p>
+<p>加快求解过程中参数的收敛速度。</p>
+<p>特点：</p>
+<ol>
+<li>对不同特征维度进行伸缩变换</li>
+<li>改变原始数据的分布，使得各个特征维度对目标函数的影响权重归于一致（使得扁平分布的数据伸缩变换成类圆形）</li>
+<li>对目标函数的影响体现在数值上</li>
+<li>把有量纲表达式变为无量纲表达式</li>
+</ol>
+<p>归一化可以消除量纲对最终结果的影响，使不同变量具有可比性。比如两个人体重差10KG，身高差0.02M，在衡量两个人的差别时体重的差距会把身高的差距完全掩盖，归一化之后就不会有这样的问题。</p>
+<p>好处：</p>
+<ol>
+<li>提高迭代求解的收敛速度</li>
+<li>提高迭代求解的精度</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>最大值与最小值非常容易受异常点影响</li>
+<li>鲁棒性较差，只适合传统精确小数据场景</li>
+</ol>
+<p>归一化一般是将数据映射到指定的范围，用于去除不同维度数据的量纲以及量纲单位。</p>
+<p>常见的映射范围有 [0, 1] 和 [-1, 1] ，最常见的归一化方法就是 Min-Max 归一化：</p>
+<p>Min-Max 归一化<br>$$<br>x_(new)=(x-x_(min))/x_(max)-x_(min)<br>$$</p>
+<p>举个例子，我们判断一个人的身体状况是否健康，那么我们会采集人体的很多指标，比如说：身高、体重、红细胞数量、白细胞数量等。</p>
+<p>一个人身高 180cm，体重 70kg，白细胞计数<br>$$<br>7.5 × 10^9 /L<br>$$<br>衡量两个人的状况时，白细胞计数就会起到主导作用从而遮盖住其他的特征，归一化后就不会有这样的问题。</p>
+<p><strong>标准化vs归一化</strong></p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\718211936160.png"></p>
+<p><img src="D:\nodejs\Nicolexiaorr.github.io\source_posts\post-name\718215045347.png"></p>
+<p>1、在分类、聚类算法中，需要使用距离来度量相似性的时候、或者使用PCA技术进行降维的时候，标准化(Z-score standardization)表现更好。</p>
+<p>2、在不涉及距离度量、协方差计算、数据不符合正太分布的时候，可以使用归一化方法。比如图像处理中，将RGB图像转换为灰度图像后将其值限定在[0 255]的范围。</p>
+<p><strong>正则化（regularization）：</strong></p>
+<p>在求解最优化问题中，<strong>调节拟合程度的参数一般称为正则项</strong>，越大表明欠拟合，越小表明过拟合</p>
+<p>为了解决过拟合问题，通常有两种方法，第一是减小样本的特征（即维度），第二是正则化（又称为惩罚penalty）</p>
+<p>正则化的一般形式是在整个平均损失函数的最后增加一个正则项（L2范数正则化，也有其他形式的正则化，作用不同）</p>
+<p>正则项越大表明惩罚力度越大，等于0表示不做惩罚。</p>
+<p>正则项越小，惩罚力度越小，极端为正则项为0，则会造成过拟合问题；正则化越大，惩罚力度越大，则容易出现欠拟合问题。</p>
+<p>标准化和正则化结合了两篇文章学习：</p>
+<p>1.<a target="_blank" rel="noopener" href="https://www.cnblogs.com/ai-ldj/p/14257457.html">https://www.cnblogs.com/ai-ldj/p/14257457.html</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29957294">https://zhuanlan.zhihu.com/p/29957294</a></p>
+<p>标准差：</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/27276029">https://www.zhihu.com/question/27276029</a></p>
+<p>12月27日  正则化内容后面补充</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NTAyOC8zMTQ5Ng==">
+    <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+    
+           if (typeof LivereTower === 'function') { return; }
+    
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+    
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2022 Nicolexiaorr<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
+</body>
+
+</html>
